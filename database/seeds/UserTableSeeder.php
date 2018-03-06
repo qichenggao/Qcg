@@ -45,6 +45,9 @@ class UserTableSeeder extends Seeder
         $user->email = 'qichenggao@126.com';
         $user->avatar = '/uploads/images/avatars/201803/02//1_1519978660_SACTxruwwG.jpg';
         $user->save();
+        $user->assignRole('Founder');
 
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }
